@@ -1,56 +1,29 @@
-body {
-  background-color: #5d3d7c; /* A deep purple color approximating the wireframe */
-  color: #fff;
-  font-family: sans-serif;
-  padding-top: 56px; /* To prevent content from being hidden by the fixed navbar */
-}
 
-.bg-purple {
-  background-color: #4a2f64; /* A slightly darker purple for the navbar */
+/* ===== Global Theme ===== */
+:root{
+  --bg:#121212;
+  --surface:#1f1f1f;
+  --accent:#00adb5;
+  --accent-hover:#019ca3;
+  --text:#ffffff;
+  --muted:#c8d1d4;
 }
-
-.navbar-brand .star-icon {
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #fff; /* White border as seen in the wireframe */
-}
-
-.about-me, .my-skills {
-  background-color: #6a4c93; /* A slightly lighter purple for the content boxes */
-  border-radius: 10px;
-  margin: 1rem 0;
-}
-
-.btn-outline-light {
-  color: #fff;
-  border-color: #fff;
-  width: 100%; /* Make the button full width to match the wireframe */
-}
-
-.btn-outline-light:hover {
-  background-color: #fff;
-  color: #5d3d7c;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
-  margin-bottom: 0.5rem;
-}
-
-.fa-solid {
-  margin-right: 0.5rem;
-}
+html,body{background-color:var(--bg); color:var(--text);}
+h1,h2,h3,h4{color:var(--accent);}
+a{color:var(--accent);}
+.btn-accent{background:var(--accent); color:#fff; border:0;}
+.btn-accent:hover{background:var(--accent-hover); color:#fff;}
+.btn-outline-light:hover{opacity:.9;}
+/* Navbar */
+.navbar-dark{background-color:var(--surface) !important;}
+.navbar-brand img{max-height:40px;}
+/* Imagery */
+.profile-img{max-width:250px; height:auto; border-radius:10px; display:block; margin:0 auto 20px;}
+.business-img{max-width:400px; height:auto; border-radius:10px; display:block; margin:0 auto 20px;}
+/* Cards */
+.card{background-color:var(--surface); color:#fff; border:none;}
+.card h5{color:var(--accent);}
+/* Forms on dark */
+.form-control,.form-select{background:var(--surface); color:#fff; border-color:#343a40;}
+.form-control:focus,.form-select:focus{background:var(--surface); color:#fff; border-color:var(--accent); box-shadow:none;}
+.modal-content{background:#181818; color:#fff;}
